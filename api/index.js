@@ -1,3 +1,6 @@
+const config = require('./pkg/config');
+require('./pkg/db');
+
 const express = require('express');
 const poc = require('./handlers/poc');
 
