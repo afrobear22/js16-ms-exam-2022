@@ -5,12 +5,18 @@ const Portable = mongoose.model(
     {
         brand: String,
         model: String,
-        cpu_cores: Number, //1-16
+        cpu_cores: Number,
         ram: Number,
-        disk: String, //hdd,ssd
+        disk: String,
         price: Number,
         stores: Array,
-        num_ports: Object, // usb,hdmi,audio,sdcard
+        num_ports: {
+            type: Object,
+            usb: Number,
+            hdmi: Number,
+            headphone: Number,
+            sdcard: Number
+        },
         created: Date
     },
     'portable-pc'

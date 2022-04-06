@@ -13,7 +13,8 @@ const getAll = async (req, res) => {
         console.log(error)
         return res.status(500).send('Internal Server Error');
     }
-}
+};
+
 const create = async (req, res) => {
     try {
         let p = await poc.addPc(req.body);
@@ -22,7 +23,8 @@ const create = async (req, res) => {
         console.log(error)
         return res.status(500).send('Internal Server Error');
     }
-}
+};
+
 const getOne = async (req, res) => {
     try {
         let pc = await poc.getOnePc(req.params.id);
@@ -31,7 +33,8 @@ const getOne = async (req, res) => {
         console.log(error)
         return res.status(500).send('Internal Server Error');
     }
-}
+};
+
 const update = async (req, res) => {
     try {
         await validate(req.body, Portable);
@@ -41,7 +44,8 @@ const update = async (req, res) => {
         console.log(error)
         return res.status(500).send('Internal Server Error');
     }
-}
+};
+
 const updatePartial = async (req, res) => {
     try {
         await validate(req.body, PortablePartial);
@@ -51,7 +55,8 @@ const updatePartial = async (req, res) => {
         console.log(error)
         return res.status(500).send('Internal Server Error');
     }
-}
+};
+
 const remove = async (req, res) => {
     try {
         await validate(req.body, PortablePartial);
@@ -61,7 +66,7 @@ const remove = async (req, res) => {
         console.log(error)
         return res.status(500).send('Internal Server Error');
     }
-}
+};
 
 module.exports = {
     getAll,
